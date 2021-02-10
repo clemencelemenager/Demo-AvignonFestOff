@@ -1,0 +1,16 @@
+@use 'src/styles/vars';
+
+.morebutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: vars.$gutter;
+  
+  .morebutton-button {
+    background: vars.$thirdColor;
+    padding: vars.$gutter*0.6;
+    border: 0;
+    color: vars.$fontColor;
+    border-radius: vars.$buttonRadius;
+  }
+}

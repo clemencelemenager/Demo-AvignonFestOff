@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,400&display=swap');
+
+// colors
+$mainColor: #E2003B;
+$secondaryColor: #ff5824;
+$thirdColor:#F6B261;
+$backgroundColor: #F6F3EF;
+
+$cancelButtonColor: #ccc;
+$editButtonColor: #333;
+$submitButtonColor: green ;
+$deleteButtonColor: #E2003B ;
+
+$backgroundColor: #F6F3EF;
+
+// buttons
+$cancelButtonColor: #ccc;
+$editButtonColor: #333;
+$submitButtonColor: #00E2A7 ;
+$deleteButtonColor: #E2003B ;
+
+// spacing
+$gutter: 1em;
+
+// text
+$fontText: Arial, sans-serif;
+$fontTitle: 'Poppins', sans-serif; ;
+$fontColor: #333;
+$sizeText: 14px;
+$sizeTitle: 20px;
+
+// Border radius
+$buttonRadius: 3px;
+
+// breaking points responsive
+$minWidthPhone: 576px;
+$minWidthTablet: 768px;
+$minWidthDesktop: 992px;
+$minWidthLargeDesktop: 1200px;
+

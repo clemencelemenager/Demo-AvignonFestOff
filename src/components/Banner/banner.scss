@@ -1,0 +1,39 @@
+@use 'src/styles/vars';
+
+.banner {
+  height: 100%;
+
+  .banner-container {
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    padding: vars.$gutter;
+
+    .banner-title {
+      font-size: 22px;
+      margin-bottom: vars.$gutter;
+
+      // Medium devices (tablets, 768px and up)
+      @media (min-width: vars.$minWidthTablet) { 
+        font-size: 24px;
+        margin-bottom: vars.$gutter/2;      
+      }  
+      @media (min-width: vars.$minWidthDesktop) { 
+        font-size: 28px;
+        margin-bottom: vars.$gutter/2;      
+      }   
+    }
+
+    .banner-description {
+      line-height: 1.2em;
+      font-size: 15px;
+
+      // Medium devices (tablets, 768px and up)
+      @media (min-width: vars.$minWidthTablet) { 
+        font-size: 18px;
+      }
+    }
+    
+
+  }
+}

@@ -1,0 +1,57 @@
+@use 'src/styles/vars';
+
+.teamcard {
+  text-align: center;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  margin: vars.$gutter vars.$gutter*1.5 ;
+  img {
+    width: 325px;
+    height: 415px;
+  }
+
+  .teamcard-infos {
+    background: white;
+    padding-bottom: 20px;
+    h2 {
+      font-weight: bold;
+      padding: vars.$gutter;
+    }
+    p {
+      padding: vars.$gutter*0.5;
+
+    }
+    .teamcard-socials {
+      width: 150px;
+      margin: auto;
+      display: flex;
+      justify-content: space-evenly;
+      .github {
+        margin-right: 12px;
+      }      
+    }
+
+    
+    
+  }
+// Medium devices (tablets, 768px and up)
+@media (min-width: vars.$minWidthTablet) { 
+ 
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: vars.$minWidthDesktop) { 
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: vars.$minWidthLargeDesktop) { 
+  margin: vars.$gutter vars.$gutter*4 ;
+ }
+
+@media (min-width: 1800px) { 
+  margin: vars.$gutter vars.$gutter*1.5 ;
+  margin-top: vars.$gutter;
+ }
+}

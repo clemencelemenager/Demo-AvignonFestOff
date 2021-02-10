@@ -1,0 +1,130 @@
+@use 'src/styles/vars';
+
+.card {
+  width: 300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: vars.$gutter*2;
+  transition: 0.5s;
+  background: white;
+  border: 1px solid #d6d4d4;
+  font-size: 18px;
+
+  @media (min-width: vars.$minWidthTablet) { 
+    font-size: 16px;
+  }
+  @media (min-width: vars.$minWidthDesktop) { 
+    font-size: 14px;
+  }
+
+  &:hover {
+    transition: 0.3s;
+    box-shadow: 0em 1em 1.5em 0px #d1cbcb;
+    transform: scale(1.01);
+  }
+
+  .card-link {
+    .card-picture {
+      height: 425px;
+      max-width: 100%;
+      margin: auto;
+      display: flex;
+    }
+  }
+  
+  .card-content {
+    padding: 0.5em;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    .card-description {
+      height: fit-content;
+    }
+
+    .card-title-wrapper {
+      height: 45px;
+      padding-top: 0.3em;
+      align-items: center;
+      
+      .card-title {
+        font-size: vars.$sizeTitle;
+        font-weight: bold;
+        line-height: 1.3em;
+      }
+    }
+    
+    .card-item {
+      margin: 0.8em 0;
+      display: flex;
+      align-items: baseline;
+      justify-content: flex-start;
+      overflow: hidden;
+      height: 18px;
+      width: 100%;
+      p {
+        padding-left: vars.$gutter/2;
+      }
+
+      .card-dates-container {
+        display: flex;
+        justify-content: space-between;
+        // align-items: baseline;
+        height: 45px;
+        overflow-y: hidden;
+        
+        .dates-list {
+          width: 100%;
+          padding-left: vars.$gutter/2;
+  
+          p {
+            margin: 0;
+            padding: 0;
+            line-height: 1.5em;
+          }
+        }
+      }
+
+      & .time {
+        font-size: 1.3em;
+        font-weight: bold;
+      }
+      
+    }
+    
+    .card-author {
+      font-style: italic;
+    }
+
+    .card-button {
+      margin: vars.$gutter 0;
+      border: 1px solid vars.$secondaryColor;
+      padding: vars.$gutter;
+      border-radius: vars.$buttonRadius;
+      text-align: center;
+      text-transform: uppercase;
+      color: vars.$secondaryColor;
+    }
+  }
+  
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: vars.$minWidthTablet) { 
+    margin: vars.$gutter*1.5 vars.$gutter*2.5;   
+  }
+  
+  // Large devices (desktops, 992px and up)
+  @media (min-width: vars.$minWidthDesktop) { 
+    .card-content {
+      font-size: 1em;
+    }
+  }
+  
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: vars.$minWidthLargeDesktop) { 
+
+   }
+}
+
+

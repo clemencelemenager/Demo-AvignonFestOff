@@ -1,0 +1,26 @@
+@use  'src/styles/vars';
+
+.legalmentions {
+  min-height: 82vh;
+  margin: vars.$gutter auto;
+  width: 80%;
+
+  .legalmentions-title {
+    font-family: vars.$fontTitle;
+    font-size: vars.$sizeTitle;
+    font-weight: bold;
+    padding: vars.$gutter 0;
+  }
+
+  .legalmentions-content {
+    p {
+      margin: vars.$gutter 0;
+    }
+    a {
+      color: vars.$secondaryColor;
+    }
+    strong {
+      font-weight: bold;
+    }
+  }
+}

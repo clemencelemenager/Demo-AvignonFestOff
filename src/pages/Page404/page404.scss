@@ -1,0 +1,40 @@
+@use 'src/styles/vars';
+
+.page404 {
+  min-height: 82.6vh;
+  margin: vars.$gutter auto;
+  width: 80%;
+
+  .page404-title {
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: vars.$gutter*0.7;
+    border-bottom: 1px solid #ccc;
+    width: 80%;
+    margin: auto;
+  }
+
+  .page404-subtitle {
+    margin-top: vars.$gutter*2;
+    text-align:center;
+    font-size: vars.$sizeTitle;
+  }
+
+  .page404-content {
+    margin: vars.$gutter*2 0;
+  }
+
+  .page404-button {
+    display: flex;
+    justify-content: center;
+    background: vars.$thirdColor ;
+    color: #333;
+    font-size: 1em;
+    font-family: vars.$fontText;
+    border: none;
+    border-radius: vars.$buttonRadius;
+    width: 85%;
+    margin: vars.$gutter auto;
+    padding: vars.$gutter;
+  }
+}

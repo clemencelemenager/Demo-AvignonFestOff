@@ -1,0 +1,103 @@
+@use  'src/styles/vars';
+
+// mobile-first
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  height: 50px;
+  background-color: #fff;
+  margin-bottom: vars.$gutter;
+  font-family: vars.$fontTitle;
+  border-bottom: 1px solid #e4e4e4;
+  position: relative;
+
+  .navbar-logo {
+    font-size: vars.$sizeTitle;
+    width: 290px;
+  }
+
+  .navbar-menu-container {
+    margin-right: -1.5em;
+    font-size: vars.$sizeText;
+
+    // For Tablets & up
+    @media (min-width: vars.$minWidthTablet) {
+      margin-right: vars.$gutter;
+      border: inherit;
+    }
+
+    .navbar-menu {
+      list-style-type: none;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: -100px;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      // For Tablets & up
+      @media (min-width: vars.$minWidthTablet) {
+        flex-direction: row;
+        position: relative;
+        top: auto;
+        right: auto;
+      }
+
+      .navbar-menu-item {
+        cursor: pointer;
+        height: 50px;
+        width: 100%;
+        line-height: 50px;
+        margin-right: 5*vars.$gutter;
+        margin-left: 5*vars.$gutter;
+        text-align: center;
+        background-color: vars.$backgroundColor;
+
+        // For Tablets & up
+        @media (min-width: vars.$minWidthTablet) {
+          margin: 0;
+          width: fit-content;
+          padding-right: vars.$gutter;
+          background-color: #fff;
+
+        }
+        &:hover,
+        &.navbar-menu-item--active {
+          // color: vars.$secondaryColor;
+          font-weight: bold;
+        }
+
+        &:nth-child(1) {
+          margin-top: 150px;
+
+          // For Tablets & up
+          @media (min-width: vars.$minWidthTablet) {
+            margin-top: initial;
+          }
+        }
+
+      }
+    }
+  
+    .navbar-menu-responsive {
+      display: block;
+      position: absolute;
+      right: vars.$gutter;
+      top: vars.$gutter /2;
+      cursor: pointer;
+      color: vars.$fontColor;
+
+      // For Tablets & up
+      @media (min-width: vars.$minWidthTablet) {
+        display: none;
+      }
+    }
+  }
+}

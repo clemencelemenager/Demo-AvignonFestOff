@@ -1,0 +1,243 @@
+@use 'src/styles/vars';
+.event-wrapper {
+  min-height: 74.8vh;
+}
+.event {
+  min-height: 82.5vh;
+
+  .event-back-icon {
+    margin-left: vars.$gutter*3;
+  }
+  // Top of the page
+  .event-header {
+    display: flex;
+    .event-title {
+      margin: vars.$gutter auto;
+      justify-self: center;
+      font-weight: bold;
+      font-size: 1.3em;
+    }
+  }
+
+  .event-img {
+    img {
+      margin: vars.$gutter auto;
+      max-width: 80%;
+      display: block;
+    }
+  }
+
+  // Content of the event
+  .event-subtitle {
+    margin-bottom: vars.$gutter;
+  }
+
+  .event-first-part {
+    div {
+      display: flex;
+      align-items: center;
+      &.dayOffsList {
+        align-items: flex-start;
+      }
+      p,
+      .event-dayoff {
+        margin-left: vars.$gutter/2;
+      }
+    }
+  }
+
+  .event-time {
+    .time {
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+  }
+
+  .event-info,
+  .event-troop,
+  .event-text {
+    text-align: left;
+    width: 90%;
+    margin: auto;
+    padding: vars.$gutter;
+    border-top: 1px solid #ccc;
+    line-height: 1.35em;
+
+    h3 {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    
+  }
+  .event-info {
+    p {
+      margin: vars.$gutter*0.8 0;
+    }
+    
+  }
+  .event-description {
+    p {
+      margin: vars.$gutter 0;
+    }
+  }
+
+// Report Modal
+  .report-container {
+    position: relative;
+    opacity: 0;
+    transition: 0.8s;
+  }
+  .report-display {
+    opacity: 1;
+    transition: 0.8s;
+  }
+  .event-report-modal {
+    position: absolute;
+    right: 0%;
+    bottom: -100%;
+    background: vars.$mainColor;
+    border-radius: 20px;
+    padding: vars.$gutter*1.2;
+    width: 90%;
+    margin-left: auto;
+    margin-bottom: vars.$gutter*1.2;
+    height: 170px;
+
+    p {
+      color: white;
+      text-align: center;
+      margin-top: vars.$gutter*3;
+    }
+    input,
+    textarea {
+      display: block;
+      width: 80%;
+      margin: vars.$gutter auto;
+      font-family: vars.$fontText;
+      border-radius: 5px;
+      padding: 0.5em;
+      }
+    textarea {
+      height: 70px;
+    }
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 87%;
+      width: 0;
+      height: 0;
+      border: 20px solid transparent;
+      border-top-color: vars.$mainColor;
+      border-bottom: 0;
+      border-right: 0;
+      margin-left: -10px;
+      margin-bottom: -20px;
+    }
+
+    .report-button {
+      display: block;
+      margin-left: auto;
+      margin-right: vars.$gutter*2.2;
+      margin-bottom: 0.7em;
+      border: none;
+      color: black;
+      border-radius: 5px;
+      background: white;
+      padding: vars.$gutter*0.5;
+    }
+  }
+ // Button
+  .event-report {
+    display: block;
+    margin-left: auto;
+    margin-right: vars.$gutter;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    background: vars.$mainColor;
+    padding: vars.$gutter*0.7;
+  }
+
+
+// Start of the media queries
+@media (min-width: vars.$minWidthPhone) { 
+  .event-report-modal {
+    width: 60%;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: vars.$minWidthTablet) { 
+  .event-report-modal {
+    width: 50%;
+  }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: vars.$minWidthDesktop) { 
+  .event-content {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding-bottom: vars.$gutter;
+
+    .event-img {
+      width: 50%;
+      img {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+    .event-info,
+    .event-troop,
+    .event-text {
+      text-align: left;
+    }
+    .event-info {
+      margin: 0;
+      display: grid;
+      grid-template-columns: 65% 35%;
+      grid-template-rows: 15% 90%;
+      padding: vars.$gutter;
+      margin-top: vars.$gutter;
+      margin-left: vars.$gutter;
+      
+      .event-subtitle
+      {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin: auto;
+      }
+
+    }
+  }
+  .event-report-modal {
+    width: 40%;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: vars.$minWidthLargeDesktop) { 
+  .event-content {
+    .event-img {
+      width: 70%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .event-report-modal {
+   width: 30%;
+ }
+ }
+ @media (min-width: 1600px){
+  .event-report-modal {
+    width: 20%;
+  }
+}
+}
+

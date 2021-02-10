@@ -1,0 +1,43 @@
+@use 'src/styles/vars';
+
+.about {
+  min-height: 82.6vh;
+
+  .about-title {
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: vars.$gutter*0.7;
+    border-bottom: 1px solid #ccc;
+    width: 80%;
+    margin: auto;
+  }
+  .about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: vars.$gutter*2 0;
+
+  }
+
+
+  // Start of the media queries
+@media (min-width: vars.$minWidthPhone) { 
+  .about-wrapper {
+    margin: vars.$gutter*2 vars.$gutter;
+
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: vars.$minWidthTablet) { 
+ 
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: vars.$minWidthDesktop) { 
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: vars.$minWidthLargeDesktop) {  }
+}

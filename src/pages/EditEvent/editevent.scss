@@ -1,0 +1,329 @@
+@use  'src/styles/vars';
+
+.editEvent {
+  margin: vars.$gutter;
+
+  .editEvent-title {
+    font-family: vars.$fontTitle;
+    font-size: vars.$sizeTitle;
+    font-weight: bold;
+    padding: vars.$gutter 0;
+  }
+
+  .input-help {
+    font-style: italic;
+    margin-bottom: vars.$gutter;
+    color: #888;
+    font-size: 0.9em;
+  }
+
+  .editEvent-form {
+    display: flex;
+    flex-wrap: wrap;
+
+    & input,
+    & textarea,
+    & select {
+      border: 1px solid #ccc;
+      font-size: vars.$sizeText;
+      padding: vars.$gutter;
+      margin-bottom: vars.$gutter;
+      background-color: #fff;
+      border-radius: vars.$buttonRadius;
+
+      &.invalid-input {
+        border: 1px solid vars.$mainColor;
+      }
+    }
+    
+    .label {
+      padding-bottom: vars.$gutter/2;
+      font-weight: 600;
+    }
+
+    .label-optionnal {
+      font-weight: normal
+    }
+
+    .suffix {
+      margin-left: vars.$gutter/2;
+      padding-bottom: vars.$gutter/2;
+    }
+
+    fieldset {
+      margin: vars.$gutter;
+    }
+
+    legend {
+      padding: vars.$gutter 0;
+      margin-top: vars.$gutter/2;
+      text-transform: uppercase;
+      border-top: 1px solid #ccc;
+      width: 100%;
+      font-size: 1.2em;
+      color: #888;
+    }
+
+    .input-number {
+      max-width: 150px;
+    }
+
+    .input-text,
+    .input-select {
+      max-width: 500px;
+    }
+
+    .form-fieldset-general {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      // For Tablets & up
+      @media (min-width: vars.$minWidthTablet) {
+        width: 45%;
+      }
+      
+      & input,
+      & select {
+        width: 100%;
+      }
+
+      .edit-image-initial {
+        max-width: 300px;
+        padding-top: vars.$gutter;
+      }
+
+      .upload-file-button {
+        padding: vars.$gutter /2;
+        margin-left: vars.$gutter;
+        font-size: 0.9em;
+      }
+    }
+
+    .duration,
+    .time,
+    .reservationContact {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      & label{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: auto;
+    
+        & input {
+          margin-left: vars.$gutter;
+          width: 120px;      
+        }
+      }
+    }
+
+    .form-fieldset-dates {
+      width: 100%;
+
+      // For Tablets & up
+      @media (min-width: vars.$minWidthTablet) {
+        width: 45%;
+      }
+
+      .add-dates-button {
+         width: 100%;
+        max-width: 500px;
+        margin-top: vars.$gutter*2;
+        margin-bottom: vars.$gutter;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        & p {
+          padding-left: vars.$gutter/2;
+        }
+      }
+
+      .selectedDates {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: vars.$gutter/2;
+        padding-bottom: vars.$gutter*2;
+
+        .selectedDates-title {
+          margin-bottom: vars.$gutter;
+        }
+
+        .selectedDates-item {
+          display:flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding-left: vars.$gutter/2;
+          padding-bottom: vars.$gutter/2;
+
+          .selectedDates-item-data {
+            padding-left: vars.$gutter /2;
+          }
+        }
+      }
+
+      .selectDates-container,
+      .selectDayOff-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 500px;
+        border: 1px solid #CCC;
+        padding: vars.$gutter;
+        margin-bottom: vars.$gutter;
+        background-color: #fff;
+        display: none;
+        position:relative;
+
+        .selectDates-button-nodisplay {
+          position: absolute;
+          right: vars.$gutter /2;
+          top:vars.$gutter /2;
+          cursor: pointer;
+        }
+
+        label {
+          display: flex;
+          align-items: center;
+          margin-bottom: vars.$gutter;
+          justify-content: center;
+        }
+
+        .selectDate-submit {
+          width: 70%;
+          border: 1px solid vars.$submitButtonColor;
+          background-color: #fff;
+          font-weight: bold;
+          text-transform: uppercase;
+          border-radius: vars.$buttonRadius;
+          padding: vars.$gutter;
+          border-radius: vars.$buttonRadius;
+          margin : vars.$gutter auto;
+          color: vars.$submitButtonColor;
+          font-size: vars.$sizeText;
+        }
+      }
+      
+      & input {
+        margin: 0 vars.$gutter;
+      }
+
+    }
+
+    .form-fieldset-details {
+      width: 100%;
+
+      // For Tablets & up
+      @media (min-width: vars.$minWidthDesktop) {
+        width: 45%;
+      }
+
+      textarea {
+        width: 100%;
+        height: 300px;
+      }
+
+    }
+
+    .form-fieldset-prices {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      // For Tablets & up
+      @media (min-width: vars.$minWidthDesktop) {
+        width: 45%;
+      }
+
+      .prices-wrapper {
+        & label {
+        display: flex;
+        align-items: center;
+
+          .label-price {
+            width: 120px;
+            padding-right: vars.$gutter;
+          }
+          .input-price {
+            width: 150px;
+          }
+          .suffix {
+            font-size: 1.2em;
+          }
+        }
+      }
+
+      .label-contact {
+        width: auto;
+      }
+
+      .input-phoneNumber {
+        max-width: 200px;
+        margin-left: vars.$gutter;
+      }
+
+      .contact {
+        margin-top: vars.$gutter;
+        input {
+          width: 100%;
+        }
+      }
+
+    }
+    
+    .editEvent-buttons-container {
+      display: flex;
+      flex-direction: column-reverse;
+      width: 100%;
+      justify-content: space-evenly;
+
+
+      // For Tablets & up
+      @media (min-width: vars.$minWidthTablet) {
+        flex-direction: row;
+        justify-content: center;
+
+    }
+
+    .editEvent-form-cancel,
+    .editEvent-form-submit,
+    .editEvent-form-delete {
+      font-size: 18px;
+      padding: vars.$gutter;
+      border: none;
+      border-radius: vars.$buttonRadius;
+      margin: vars.$gutter/2 0;
+      cursor: pointer;
+
+      // For Tablets & up
+      @media (min-width: vars.$minWidthTablet) {
+        width: 30%;
+        margin-right: vars.$gutter;
+      }
+      @media (min-width: vars.$minWidthDesktop) {
+        width: 30%;
+      }
+    }
+    
+    .editEvent-form-cancel {
+      background-color: vars.$cancelButtonColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .editEvent-form-submit {
+      background-color: vars.$submitButtonColor;
+      color: #333;
+    }
+
+    .editEvent-form-delete {
+      border: 2px solid vars.$deleteButtonColor;
+      color: vars.$deleteButtonColor;
+    }
+  }
+}
+}

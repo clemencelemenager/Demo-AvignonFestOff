@@ -1,0 +1,206 @@
+@use 'src/styles/vars';
+
+.filters {
+  margin-top: vars.$gutter;
+  label {
+    display: none;
+  }
+
+  .filters-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: vars.$gutter*0.5;
+    width: 95%;
+    margin: auto;
+    margin-bottom:vars.$gutter ;
+    
+    .filters-datepicker {
+      width: 80%;
+      padding: vars.$gutter;
+      border-radius: 5px;
+      text-align: center;
+      font-family: vars.$fontText;
+      border: none;
+      box-shadow: 0 0.75rem 2.75rem 0 rgb(0 0 0 / 15%);
+    }
+
+    .filters-date-icon {
+      margin-left: vars.$gutter*0.6;
+      cursor: pointer;
+    }
+  }
+
+  .filters-advance {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    background: vars.$backgroundColor;
+
+    .filters-genre,
+    .filters-place,
+    .filters-name,
+    .filters-price {
+      border-bottom: 1px solid #ccc;
+        input,
+        select
+        {
+          display: block;
+          border: none; 
+          font-size: vars.$sizeText;
+          padding: vars.$gutter*2;
+          background-color: transparent;
+          width: 100%;
+      }
+    }
+    
+
+  .filters-submit {
+    display: block;
+    background: vars.$thirdColor;
+    color: #fff;
+    font-size: 1em;
+    font-family: vars.$fontText;
+    border: none;
+    border-radius: vars.$buttonRadius;
+    width: 50%;
+    margin: vars.$gutter*3.25 auto;
+    padding: vars.$gutter;
+  }
+
+}
+
+.filters-submit-mobile {
+  display: block;
+  background: vars.$thirdColor;
+  color: #fff;
+  font-size: 1em;
+  font-family: vars.$fontText;
+  border: none;
+  border-radius: vars.$buttonRadius;
+  width: 85%;
+  margin: vars.$gutter auto;
+  padding: vars.$gutter;
+}
+
+.filters-filtered {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  .filters-result {
+      margin-bottom: vars.$gutter;
+    }
+  .filters-init {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: vars.$buttonRadius;
+    padding: vars.$gutter*0.5;
+    cursor: pointer;
+    background: white;
+    width: fit-content;
+    p {
+      margin-left: 8px;
+      font-size: 0.9em;
+    }
+  }
+}
+  .filters-animation {
+    right: 0;
+    transition: 0.8s;
+  }
+  @media (min-width: vars.$minWidthPhone) { 
+    .filters-date {
+      .filters-datepicker {
+        width: 55%;
+      }
+    }
+  
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: vars.$minWidthTablet) { 
+  .filters-filtered {
+    flex-direction: row;
+  }
+  .filters-submit-mobile {
+    width: 55%;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: vars.$minWidthDesktop) { 
+  .filters-form
+  {
+     display: flex;
+     width: 90%;
+     margin: auto;
+     margin-bottom: vars.$gutter*1.5;
+     box-shadow: 0 0.75rem 2.75rem 0 rgb(0 0 0 / 15%);
+     border-radius: 20px;
+
+     .filters-date {
+       padding: vars.$gutter;
+       padding-right: 0;
+       background: white;
+       border-radius: 20px 0 0 20px;
+       border-right: 1px solid vars.$thirdColor;
+       margin: 0;
+       width: 15%;
+       .filters-datepicker {
+         width: 100%;
+         border: 0;
+         padding: 0.5em;
+         border-radius: 50px 0 0 50px;
+         box-shadow: none;
+       }
+     }
+     .filters-date-icon {
+       display: none;
+     }
+     .filters-advance {
+       z-index: 0;
+       background-color: transparent;
+       position: inherit;
+       display: flex;
+       .filters-genre,
+       .filters-place,
+       .filters-name,
+       .filters-price {
+         border-right: 1px solid vars.$thirdColor;
+         width: 100%;
+         border-bottom: 0;        
+       }
+ 
+       select,
+       input
+       {
+         background: white;
+         padding: 1em;
+         margin-right: 0.3em;
+         height: 100%;
+         width: 100%;
+         &:focus {
+           outline: none;
+         }
+       }
+       .filters-search {
+         border-radius: 0 20px 20px 0;
+         background: vars.$thirdColor;
+         border: none;
+         padding: vars.$gutter;
+         color: #fff;
+       }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: vars.$minWidthLargeDesktop) { 
+  .filters-form {
+    width: 80%;
+  }
+}
+}

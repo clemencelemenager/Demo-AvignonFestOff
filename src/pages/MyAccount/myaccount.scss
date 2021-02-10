@@ -1,0 +1,139 @@
+@use 'src/styles/vars';
+
+.myaccount-delete-message {
+  text-align: center;
+  color: red;
+  font-size: 1.3em;
+  margin-bottom: vars.$gutter;
+}
+
+.hidden {
+  display: none;
+}
+
+.myaccount {
+  margin: vars.$gutter;
+  min-height: 82.6vh;
+  
+  .myaccount-header {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: vars.$minWidthDesktop) { 
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+
+  .myaccount-title {
+    font-family: vars.$fontTitle;
+    font-size: vars.$sizeTitle;
+    font-weight: bold;
+    padding: vars.$gutter/2 0;
+    margin: vars.$gutter/2 vars.$gutter;
+  }
+
+  .myaccount-wrapper-button {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media (min-width: vars.$minWidthTablet) { 
+      justify-content: flex-start;
+      flex-direction: row;
+      margin-left: vars.$gutter;
+    }
+
+    .myaccount-button {
+      border-radius: vars.$buttonRadius;
+      color: #333;
+      width: 85%;
+      font-size: 1em;
+      text-align:center;
+      padding: vars.$gutter;
+      margin: vars.$gutter/2 auto;
+      background-color: vars.$backgroundColor;
+      cursor: pointer;
+
+      &.button-modify {
+        border: 1px solid vars.$editButtonColor;
+        color: vars.$editButtonColor;
+      }
+      &.button-admin {
+        border: 1px solid vars.$secondaryColor;
+        color: vars.$secondaryColor;
+      }
+
+      &.button-delete {
+        border: 1px solid vars.$deleteButtonColor;
+        color: vars.$deleteButtonColor;
+      }
+
+      &.button-cancel-delete {
+        display: block;
+        background-color: vars.$cancelButtonColor;
+        color: #333;
+      }
+      &.button-confirm-delete {
+        display: block;
+        background-color: vars.$deleteButtonColor;
+        color: #fff;
+        font-weight:bold;
+      }
+
+      @media (min-width: vars.$minWidthTablet) { 
+        width: auto;
+        margin: vars.$gutter/2 0;
+        margin-right: vars.$gutter;
+        padding: vars.$gutter/2;
+      }
+      
+    }
+  }
+
+  .myaccount-subtitle {
+    font-family: vars.$fontTitle;
+    font-size: vars.$sizeTitle;
+    padding: vars.$gutter/2 0;
+    margin: vars.$gutter/2 vars.$gutter;
+  }
+
+  .myaccount-create-event-container {
+    display:flex;
+    margin: vars.$gutter auto;
+    justify-content: center;
+
+    @media (min-width: vars.$minWidthTablet) { 
+      justify-content: flex-start;
+      margin-left: vars.$gutter;
+    }
+
+    .myaccount-create-event-button {
+      background-color: vars.$submitButtonColor;
+      border: none;
+      border-radius: vars.$buttonRadius;
+      color: #333;
+      width: 85%;
+      font-size: 1em;
+      text-align:center;
+      padding: vars.$gutter;
+  
+      @media (min-width: vars.$minWidthTablet) { 
+        width: 35%;
+      }
+      @media (min-width: vars.$minWidthLargeDesktop) { 
+        width: 25%;
+      }
+    }
+  }
+
+  .myaccount-wrapper-event {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    @media (min-width: vars.$minWidthLargeDesktop) { 
+      justify-content: flex-start;
+    }
+  }
+}

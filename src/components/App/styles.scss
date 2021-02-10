@@ -1,0 +1,11 @@
+@use 'src/styles/vars';
+
+.app {
+
+  h1, h2, h3, h4 {
+    font-family: vars.$fontTitle;
+  }
+  font-family: vars.$fontText;
+  color: vars.$fontColor;
+  background-color: vars.$backgroundColor;
+}

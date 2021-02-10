@@ -1,0 +1,79 @@
+@use 'src/styles/vars';
+
+.edit-account  {
+  min-height: 82.6vh;
+
+  .hidden {
+    display: none;
+  }
+  .edit-ok {
+    margin: vars.$gutter;
+    color: green;
+    text-align: center;
+  }
+
+  .edit-title {
+    text-align: center;
+    margin: auto;
+    font-size: vars.$gutter*1.5;
+    padding-top: vars.$gutter*4;
+    padding-bottom: vars.$gutter;
+    border-bottom: 1px solid #ccc;
+    width: 50%;
+  }
+  .edit-form {
+    width: 80%;
+    margin: 0 auto;
+
+    .field {
+      margin: vars.$gutter 0;
+    }
+
+    .edit-button {
+      display: block;
+      margin: vars.$gutter*2 auto;
+      padding: vars.$gutter vars.$gutter*1.5;
+      background: vars.$thirdColor;
+      border-radius: vars.$buttonRadius;
+      border: none;
+    }
+    a {
+      display: block;
+      width: 400px;
+      margin: auto;
+      &:hover {
+        color: vars.$thirdColor;
+      }
+    }
+  }
+
+  // Start of the media queries
+@media (min-width: vars.$minWidthPhone) { 
+  .edit-form {
+    width: 60%;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: vars.$minWidthTablet) { 
+  .edit-form {
+    width: 40%;
+  }
+ 
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: vars.$minWidthDesktop) { 
+  .edit-form {
+    width: 35%;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: vars.$minWidthLargeDesktop) { 
+
+  .login-form {
+    width: 25%;
+  }
+ }
+}

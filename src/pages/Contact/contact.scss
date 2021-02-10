@@ -1,0 +1,101 @@
+@use 'src/styles/vars';
+
+.contact  {
+  min-height: 82.6vh;
+  .contact-title {
+    text-align: center;
+    margin: auto;
+    font-size: vars.$gutter*1.5;
+    padding-top: vars.$gutter*4;
+    padding-bottom: vars.$gutter;
+    border-bottom: 1px solid #ccc;
+    width: 50%;
+  }
+
+  .hidden {
+    display: none;
+  }
+  .contact-ok {
+    margin: vars.$gutter;
+    color: green;
+    text-align: center;
+  }
+  .contact-error {
+    color: red;
+    margin: vars.$gutter;
+    text-align: center;
+  }
+
+  .contact-form {
+    width: 80%;
+    margin: 0 auto;
+
+    input,
+    textarea {
+      display: block;
+      width: 100%;
+      margin: vars.$gutter auto;
+      font-family: vars.$fontText;
+      border-radius: 5px;
+      padding: 1em;
+      border: 1px solid #ccc;
+
+      &:focus, &:active, &:visited {
+        border: 1px solid vars.$thirdColor;
+      }
+      }
+    textarea {
+      height: 70px;
+    }
+
+
+    .contact-button {
+      display: block;
+      margin: vars.$gutter*2 auto;
+      padding: vars.$gutter vars.$gutter*1.5;
+      background: vars.$thirdColor;
+      border-radius: vars.$buttonRadius;
+      border: none;
+    }
+  }
+
+  .contact-signup {
+    display: block;
+    width: 212px;
+    margin: auto;
+
+    &:hover {
+      color: vars.$thirdColor;
+    }
+  }
+
+  // Start of the media queries
+@media (min-width: vars.$minWidthPhone) { 
+  .contact-form {
+    width: 60%;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: vars.$minWidthTablet) { 
+  .contact-form {
+    width: 40%;
+  }
+ 
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: vars.$minWidthDesktop) { 
+  .contact-form {
+    width: 35%;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: vars.$minWidthLargeDesktop) { 
+
+  .contact-form {
+    width: 25%;
+  }
+ }
+}
