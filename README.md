@@ -2,6 +2,11 @@
 
 Cette application web est un projet de fin de formation réalisé en équipe en 1 mois. Le front a été réalisé en React par 2 développeurs front (dont moi-même) et communique en API avec un back-end Symfony.
 
+## Démo du projet
+
+Pour en savoir plus et visualiser le rendu, vous pouvez consulter la [démo du projet sur Youtube](https://www.youtube.com/watch?v=suuRCm9YBKE#t=53m16s) qui a été présentée en fin de formation.
+
+
 ## Objectif du projet
 
 L'idée du projet est de proposer une digitalisation de la programmation OFF du festival d'Avignon, aujourd'hui existant uniquement en version papier ou PDF.
