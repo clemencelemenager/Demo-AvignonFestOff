@@ -16,7 +16,7 @@ import {
 import { toggleLoader } from 'src/actions/settings';
 
 const editEventMiddleware = (store) => (next) => (action) => {
-  const apiUrl = 'http://54.152.137.82/App-pour-les-festivaliers-back/public';
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   switch (action.type) {
     case UPDATE_EVENT: {
@@ -98,7 +98,7 @@ const editEventMiddleware = (store) => (next) => (action) => {
       /** Request put to modify event in db */
       axios({
         method: 'put',
-        url: `${apiUrl}/api/handle_event/${idEvent}`,
+        url: `${apiUrl}api/handle_event/${idEvent}`,
         data: jsonData,
         headers: {
           Authorization: `Bearer ${token}`,
@@ -131,7 +131,7 @@ const editEventMiddleware = (store) => (next) => (action) => {
       const token = localStorage.getItem('token');
       axios({
         method: 'delete',
-        url: `${apiUrl}/api/handle_date/${idDatesToDelete}`,
+        url: `${apiUrl}api/handle_date/${idDatesToDelete}`,
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -151,7 +151,7 @@ const editEventMiddleware = (store) => (next) => (action) => {
       const token = localStorage.getItem('token');
       axios({
         method: 'delete',
-        url: `${apiUrl}/api/handle_day_off/${idDayOffToDelete}`,
+        url: `${apiUrl}api/handle_day_off/${idDayOffToDelete}`,
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -173,7 +173,7 @@ const editEventMiddleware = (store) => (next) => (action) => {
 
       axios({
         method: 'delete',
-        url: `${apiUrl}/api/handle_event/${idEvent}`,
+        url: `${apiUrl}api/handle_event/${idEvent}`,
         headers: {
           Authorization: `Bearer ${token}`,
         },

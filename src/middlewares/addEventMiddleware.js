@@ -10,7 +10,7 @@ import {
 } from 'src/actions/addEvent';
 
 const addEventMiddleware = (store) => (next) => (action) => {
-  const apiUrl = 'http://54.152.137.82/App-pour-les-festivaliers-back/public';
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   switch (action.type) {
     case ADD_NEW_EVENT: {
@@ -81,7 +81,7 @@ const addEventMiddleware = (store) => (next) => (action) => {
       /** Request post to add event in db */
       axios({
         method: 'post',
-        url: `${apiUrl}/api/handle_event/new`,
+        url: `${apiUrl}api/handle_event/new`,
         data: jsonData,
         headers: {
           Authorization: `Bearer ${token}`,

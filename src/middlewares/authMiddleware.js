@@ -24,7 +24,7 @@ import {
 import { toggleLoader } from 'src/actions/settings';
 
 const authMiddleware = (store) => (next) => (action) => {
-  const apiUrl = 'http://54.152.137.82/App-pour-les-festivaliers-back/public/';
+  const apiUrl = process.env.REACT_APP_API_URL;
   const { auth } = store.getState();
   const token = localStorage.getItem('token');
 

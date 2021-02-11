@@ -30,14 +30,14 @@ const Card = ({
     {
       (cardType === 'myAccount') && (
         <Link className="card-link" to={`/spectacle/edition/${id}`}>
-          <img className="card-picture" src={`http://54.152.137.82/App-pour-les-festivaliers-back/public/upload/images/${image}`} alt="Affiche du spectacle" />
+          <img className="card-picture" src={`${process.env.REACT_APP_ASSETS_URL}${image}`} alt="Affiche du spectacle" />
         </Link>
       )
     }
     {
       (cardType === 'home') && (
         <Link className="card-link" to={`/spectacle/id/${id}`}>
-          <img className="card-picture" src={`http://54.152.137.82/App-pour-les-festivaliers-back/public/upload/images/${image}`} alt="Affiche du spectacle" />
+          <img className="card-picture" src={`${process.env.REACT_APP_ASSETS_URL}${image}`} alt="Affiche du spectacle" />
         </Link>
       )
     }

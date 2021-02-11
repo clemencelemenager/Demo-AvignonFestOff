@@ -58,7 +58,7 @@ const Event = ({
         <div className="event-container">
           <div className="event-content">
             <div className="event-img">
-              <img src={`http://54.152.137.82/App-pour-les-festivaliers-back/public/upload/images/${event.image}`} alt="Affiche de l'événement" />
+              <img src={`${process.env.REACT_APP_ASSETS_URL}${event.image}`} alt="Affiche de l'événement" />
             </div>
             <div className="event-info">
               {/* <h3 className="event-subtitle">{event.troopName}</h3> */}

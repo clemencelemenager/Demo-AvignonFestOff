@@ -15,7 +15,7 @@ import {
 } from 'src/actions/filters';
 
 const eventMiddleware = (store) => (next) => (action) => {
-  const apiUrl = 'http://54.152.137.82/App-pour-les-festivaliers-back/public/';
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   const { filters, event } = store.getState();
 

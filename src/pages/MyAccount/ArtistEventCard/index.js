@@ -17,7 +17,7 @@ const ArtistEventCard = ({
   image,
 }) => (
   <div className="card">
-    <img className="card-picture" src={`http://54.152.137.82/App-pour-les-festivaliers-back/public/upload/images/${image}`} alt="Affiche du spectacle" />
+    <img className="card-picture" src={`${process.env.REACT_APP_ASSETS_URL}${image}`} alt="Affiche du spectacle" />
     <div className="card-content">
       <div className="card-description">
         <p className="card-name">{title} by <span className="card-author">{authorName}</span></p>

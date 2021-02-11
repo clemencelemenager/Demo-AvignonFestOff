@@ -29,3 +29,7 @@ Démarrer le serveur local :
 ```shell
 $ yarn start --open
 ```
+
+### Variables d'environnement
+
+Remplir les variables dans le fichier `.env.example` et renommer le fichier en `.env`

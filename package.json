@@ -49,6 +49,7 @@
     "axios": "^0.21.1",
     "chai": "^4.2.0",
     "classnames": "^2.2.6",
+    "dotenv-webpack": "^6.0.0",
     "framer-motion": "^3.3.0",
     "mocha": "^8.2.1",
     "prop-types": "^15.7.2",

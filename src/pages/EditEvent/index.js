@@ -242,7 +242,7 @@ const EditEvent = ({
                 />
                 {image && (
                   <img
-                    src={`http://54.152.137.82/App-pour-les-festivaliers-back/public/upload/images/${image}`}
+                    src={`${process.env.REACT_APP_ASSETS_URL}${image}`}
                     alt="Affiche de l'événement"
                     className="edit-image-initial"
                   />
